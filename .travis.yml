@@ -19,8 +19,10 @@ before_install:
 
 install:
    - arduino --install-library "Adafruit ILI9341","Adafruit GFX Library"
+   - sudo mv rc-switch-2.6.2/RCSwitch.h /home/travis/arduino_ide/libraries/Adafruit_Test_Library
+   - sudo mv rc-switch-2.6.2/RCSwitch.cpp /home/travis/arduino_ide/libraries/Adafruit_Test_Library
    - ls /home/travis/arduino_ide/libraries/Adafruit_Test_Library
-   #- sudo mv rc-switch-2.6.2 /home/travis/arduino_ide/libraries/Adafruit_Test_Library
+   - sudo rm -rf rc-switch-2.6.2
 
 script:
    - build_main_platforms
