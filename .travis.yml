@@ -13,10 +13,13 @@ env:
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 
 before_install:
-   - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)  
+   - source <(curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/install.sh)
+   - wget https://github.com/sui77/rc-switch/archive/2.6.2.tar.gz
+   - tar xf rc-switch-2.6.2.tar.gz
 
 install:
-   - arduino --install-library "Adafruit ILI9341","Adafruit GFX Library","RCSwitch"
+   - arduino --install-library "Adafruit ILI9341","Adafruit GFX Library"
+   - sudo mv rc-switch-2.6.2 /home/travis/arduino_ide/libraries/Adafruit_Test_Library
 
 script:
    - build_main_platforms
