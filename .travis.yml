@@ -19,7 +19,7 @@ before_install:
 
 install:
    - arduino --install-library "Adafruit ILI9341","Adafruit GFX Library"
-   - sudo mv 2.6.2 /home/travis/arduino_ide/libraries/Adafruit_Test_Library
+   - sudo mv rc-switch-2.6.2 /home/travis/arduino_ide/libraries/Adafruit_Test_Library
 
 script:
    - build_main_platforms
