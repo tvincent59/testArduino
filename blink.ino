@@ -22,7 +22,7 @@
   http://www.arduino.cc/en/Tutorial/Blink
 */
 
-#include<RCSwitch.h>
+#include "RCSwitch.h"
 
 // the setup function runs once when you press reset or power the board
 void setup() {
